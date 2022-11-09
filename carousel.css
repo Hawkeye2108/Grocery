@@ -1,0 +1,61 @@
+   /* carousel styling */
+   .carousel{
+    background-color: aqua;
+    height: 500px;
+    /* margin: 0 25px; */
+    margin: 0 70px;
+    margin-top: 25px;
+     padding: 0;
+    position: relative;
+    border-radius: 25px;
+    
+}
+.carousel_slide{
+    background-color: aqua;
+    width: 100%;
+    display: none;
+    border-radius: 25px;
+    height: 500px;
+}
+.carousel_img{
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    border-radius: 25px;
+
+}
+.prev,.next{
+    cursor: pointer;
+    font-size: 50px;
+    color: blueviolet;
+    position: absolute;
+    top: 50%;
+    padding: 0 8px;
+    transition: color 0.1s ease-in;
+
+}
+.next{
+    right: 0;
+}
+.prev:hover,.next:hover{
+    color: aqua;
+}
+.dot_nav{
+    text-align: center;
+}
+.dot{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 40px;
+    background-color: rgb(35, 35, 27);
+    position: relative;
+    top: -20px;
+    margin: 3px;
+    transition: background-color 0.1s ease-in;
+}
+.active, .dot:hover{
+    background-color: blueviolet;
+}

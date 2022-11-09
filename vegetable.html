@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery|Vegetables</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-basket-shopping logo"></i>   
+    </a>
+
+    <ul class="nav_menu ">
+      <li class="nav_item "><a href="index.html" class="nav_link nav_active">Home</a></li>
+  
+      <li class="nav_item"><a href="cart.html" class="nav_link ">Cart</a></li>
+    </ul>
+    <div class="right_menu">
+      <p id="name"></p>
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping" id="cartShopping"></i></a>
+    <p class="cart" id="cart" style="position: relative;right: 8%;"></p>
+  </div>
+    <div class="hamburger">
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+          </div>
+  </nav>
+
+    <h1 style="text-align: center;
+    font-size:45px">Vegetables</h1>
+    <div class="cards">
+    <div class="card">
+        <h3>Potato</h3>
+        <img src="./vegetables/potato.jpg" alt="" />
+        <h4>Rs. 30/Kg</h4>
+        <p></p>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,+1)">+</a>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,-1)">-</a>
+      </div>
+      <div class="card">
+        <h3>Onion</h3>
+        <img src="./vegetables/onion.jpg" alt="" />
+        <h4>Rs. 60/Kg</h4>
+        <p></p>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,+1)">+</a>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,-1)">-</a>
+      </div>
+      <div class="card">
+        <h3>Capsicum</h3>
+        <img src="./vegetables/capsicum.jpg" alt="" />
+        <h4>Rs. 80/Kg</h4>
+        <p></p>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,+1)">+</a>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,-1)">-</a>
+      </div>
+      <div class="card">
+        <h3>Carrot</h3>
+        <img src="./vegetables/carrot.jpg" alt="" />
+        <h4>Rs. 50/Kg</h4>
+        <p></p>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,+1)">+</a>
+        <a href="#" class="shop_btn" onclick="addToCart(this.parentNode,-1)">-</a>
+      </div>
+      
+</div>
+
+<footer class="footer">
+  <ul>
+    <li><a href="https://www.instagram.com" target="_blank"><i class=" fa-brands fa-instagram"
+          ></i></a></li>
+    <li><a href="https://www.youtube.com" target="_blank"><i
+          class="fa-brands fa-youtube"></i></a></li>
+    <li><a href="https://in.linkedin.com" target="_blank"><i
+          class="fa-brands fa-linkedin"></i></a></li>
+    <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter" ></i></a></li>
+
+  </ul>
+  <div class="gmail">Contact Us at <a href="https://mail.google.com/mail/"
+      target="_blank">grocery1234@gmail.com</a></div>
+</footer>
+
+<!-- <script src="./cart.js"></script> -->
+<script src="/addToCart.js"></script>
+<script src="/cardQuantity.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script >
+  const firebaseConfig = {
+     apiKey: "AIzaSyAnP4cPQGHmrSuGeF4MHn8Wd_mbIgv6duE",
+     authDomain: "website-76c9e.firebaseapp.com",
+     databaseURL: "https://website-76c9e-default-rtdb.firebaseio.com",
+     projectId: "website-76c9e",
+     storageBucket: "website-76c9e.appspot.com",
+     messagingSenderId: "336252980180",
+     appId: "1:336252980180:web:5c6332ce6a11d332c1a441",
+     measurementId: "G-5MZHQZ4H9L"
+   };
+ 
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+</script>
+<script src="onAuthStateChanged.js"></script>
+</body>
+</html>

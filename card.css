@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card{
+    height: auto;
+    min-height: 200px;
+    width: auto;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    box-shadow: 1px 1px 12px 1px rgb(71, 62, 62);
+    border-radius: 6px;
+}
+.card img{
+    height: 150px;
+    width: 100%;
+    object-fit: fill;
+    /* border: 2px solid red; */
+}
+.shop_btn{
+    display: block;
+    min-width:150px;
+    text-align: center;
+    min-height: 21px;
+    cursor: pointer;
+    margin: 4px;
+    text-decoration: none;
+    background-color: rgb(30, 226, 30);
+    color: white;
+}
+.addToCart{
+    display: flex;
+}
+
+/* cards */
+.cards{
+display: flex;
+margin: 9px;
+gap:20px;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+
+.category{
+    text-align: center;
+    margin:8px;
+    /* display: flex;
+    justify-content: center; */
+}

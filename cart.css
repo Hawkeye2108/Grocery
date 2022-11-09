@@ -1,0 +1,14 @@
+table{
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+th{
+    margin: 200px;
+}
+.quantity{
+    border: 2px solid black;
+    text-align: center
+}
+/* tr{
+    margin: 200px;;
+} */

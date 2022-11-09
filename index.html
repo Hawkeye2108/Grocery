@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" href="carousel.css">
+  <link rel="stylesheet" href="login1.css">
+
+</head>
+
+<body>
+  <div  class="login_container" id="signup_container">
+  <div class="container" id="container">
+    <label for="show" class="close-btn fas fa-times" title="close" id="close" ></label>
+    <div class="text">
+       Sign Up Form
+    </div>
+    <form  action="#">
+       <div class="data">
+          <label>Email </label>
+          <input type="email" id="email" required>
+       </div>
+       <div class="data">
+          <label>Password</label>
+          <input type="password" id="password"  required>
+       </div>
+    
+       <div class="btn">
+          <div class="inner"></div>
+          <button type="submit" onclick="signUp()">Sign Up</button>
+       </div>
+       <!-- <div class="signup-link">
+          Already registered? <a onclick="logInForm()">Log In</a>
+       </div> -->
+    </form>
+ </div>
+</div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-basket-shopping logo"></i>   
+    </a>
+
+    <ul class="nav_menu ">
+      <li class="nav_item "><a href="index.html" class="nav_link nav_active">Home</a></li>
+      <li class="nav_item"><a href="cart.html" class="nav_link ">Cart</a></li>
+    </ul>
+    <div class="right_menu">
+      <p id="name"></p>
+    <a ><i class="fa-solid fa-user" onclick="user()"></i></a>
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping" id="cartShopping"></i></a>
+    <p class="cart" id="cart" style="position: relative;right: 8%;"></p>
+  </div>
+    <div class="hamburger">
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+          </div>
+  </nav>
+
+
+  <div class="carousel">
+    <div class="carousel_slide">
+      <img src="./images/vegetable.jpg" alt="" class="carousel_img">
+    </div>
+
+    <div class="carousel_slide">
+      <img
+        src="./images/fruits.jpg"
+        alt="" class="carousel_img">
+    </div>
+
+    <div class="carousel_slide">
+      <img src="./images/fish.jpg" alt="" class="carousel_img">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <div class="dot_nav">
+    <span class="dot " onclick="currentSlides(1)"></span>
+    <span class="dot" onclick="currentSlides(2)"></span>
+    <span class="dot " onclick="currentSlides(3)"></span>
+</div>
+
+  <!-- Cards -->
+  <div class="category">
+    <h2>Shop By Category</h2>
+  
+  <div class="cards">
+    <div class="card">
+      <h3>Fruits</h3>
+      <p>upto 20% off</p>
+      <img src="./images/fruits.jpg" alt="" />
+      <a href="fruit.html" class="shop_btn">Shop Now</a>
+    </div>
+    <div class="card">
+      <h3>Vegetables</h3>
+      <p>upto 20% off</p>
+      <img src="./images/vegetable.jpg" alt="" />
+      <a href="vegetable.html" class="shop_btn">Shop Now</a>
+    </div>
+    <div class="card">
+      <h3>Fish</h3>
+      <p>upto 20% off</p>
+      <img src="./images/fish.jpg" alt="" />
+      <a href="fish.html" class="shop_btn">Shop Now</a>
+    </div>
+    <div class="card">
+      <h3>Meat</h3>
+      <p>upto 44% off</p>
+      <img src="./images/meat.jpg" alt="">
+      <a href="meat.html" class="shop_btn">Shop Now</a>
+    </div>
+  </div>
+</div>
+  <!-- footer -->
+  <footer class="footer">
+    <ul>
+      <li><a href="https://www.instagram.com" target="_blank"><i class=" fa-brands fa-instagram"
+            ></i></a></li>
+      <li><a href="https://www.youtube.com" target="_blank"><i
+            class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://in.linkedin.com" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter" ></i></a></li>
+
+    </ul>
+    <div class="gmail">Contact Us at <a href="https://mail.google.com/mail/"
+        target="_blank">grocery1234@gmail.com</a></div>
+  </footer>
+</body>
+<script src="cart.js"></script>
+<script src="carousel.js"></script>
+<script src="user.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script >
+  const firebaseConfig = {
+     apiKey: "AIzaSyAnP4cPQGHmrSuGeF4MHn8Wd_mbIgv6duE",
+     authDomain: "website-76c9e.firebaseapp.com",
+     databaseURL: "https://website-76c9e-default-rtdb.firebaseio.com",
+     projectId: "website-76c9e",
+     storageBucket: "website-76c9e.appspot.com",
+     messagingSenderId: "336252980180",
+     appId: "1:336252980180:web:5c6332ce6a11d332c1a441",
+     measurementId: "G-5MZHQZ4H9L"
+   };
+ 
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+</script>
+<script src="signUp.js"></script>
+<script src="onAuthStateChanged.js"></script>
+
+</html>
